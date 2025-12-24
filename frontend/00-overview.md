@@ -1,18 +1,6 @@
-
----
-
-# frontend/00-overview.md
-
-```markdown
 # Frontend 演進總覽（Overview）
 
-## 一句話總結
-
 > Web 前端的歷史，是「狀態從無 → Server → DOM → JS → Component」的過程。
-
----
-
-## 狀態責任轉移圖
 
 ```mermaid
 sequenceDiagram
@@ -27,3 +15,4 @@ sequenceDiagram
     DOM->>DOM: 狀態混雜
     JS->>JS: 狀態模型化
     Comp->>Comp: 狀態封裝
+```
