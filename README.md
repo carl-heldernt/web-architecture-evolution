@@ -1,10 +1,19 @@
 # Web Architecture Evolution
 > 前後端架構演進的學習筆記（Frontend 篇）
 
-本 Repo 用來整理 Web 架構的**演進邏輯與因果關係**，  
-重點不是框架語法，而是：
+本 Repo 用來整理 Web 前端在不同時代**如何解決同一個問題**，
+並觀察「狀態（State）」與「責任」如何隨時間轉移。
 
-> **狀態（State）與責任如何在系統中轉移**
+核心方法：
+> **用「同一個功能」在不同時代重寫一次**
+
+---
+
+## 範例功能（全篇共用）
+
+**Todo List**
+- 顯示清單
+- 新增一筆資料
 
 ---
 
@@ -12,25 +21,15 @@
 
 ```mermaid
 flowchart LR
-    HTML["HTML<br/>Document"] --> SSR["Server Rendering<br/>PHP / JSP"]
+    HTML["HTML<br/>文件"] --> SSR["Server Rendering<br/>PHP / JSP"]
     SSR --> AJAX["AJAX + jQuery<br/>DOM Driven"]
     AJAX --> AngularJS["AngularJS<br/>Data Driven UI"]
-    AngularJS --> Modern["React / Vue / Angular<br/>Component"]
+    AngularJS --> Modern["Modern Frameworks<br/>Component"]
 ```
 
 ---
 
-## Web 的本質轉變
-
-```mermaid
-flowchart TB
-    A["文件導向<br/>Document"] --> B["互動導向<br/>Interaction"]
-    B --> C["應用導向<br/>Application"]
-```
-
----
-
-## 狀態（State）責任轉移
+## 狀態責任轉移
 
 ```mermaid
 sequenceDiagram
@@ -49,35 +48,7 @@ sequenceDiagram
 
 ---
 
-## Repo 結構
-
-```text
-web-architecture-evolution/
-│
-├─ README.md
-│
-├─ frontend/
-│   ├─ 00-overview.md
-│   ├─ 01-static-html.md
-│   ├─ 02-ssr.md
-│   ├─ 03-ajax-jquery.md
-│   ├─ 04-angularjs.md
-│   └─ 05-modern-frameworks.md
-│
-└─ backend/   #（預計擴充）
-```
-
----
-
-## 為什麼要整理這些？
-
-- 建立「技術為何出現」的因果關係
-- 幫助未來做架構選型
-- 作為長期可回顧的工程筆記
-
----
-
-## 延伸閱讀
+## 章節導覽
 
 - frontend/00-overview.md
 - frontend/01-static-html.md

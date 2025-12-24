@@ -1,4 +1,6 @@
-# AngularJS（資料導向 UI）
+# 04 · AngularJS（資料導向 UI）
+
+## 架構
 
 ```mermaid
 flowchart TB
@@ -6,5 +8,25 @@ flowchart TB
     View -->|Two-way Binding| Model
 ```
 
-- 資料驅動 UI
-- 雙向綁定帶來效能代價
+## Todo 範例
+
+```html
+<input ng-model="newTodo">
+<button ng-click="add()">Add</button>
+
+<ul>
+  <li ng-repeat="t in todos">{{ t }}</li>
+</ul>
+```
+
+```js
+$scope.todos = [];
+
+$scope.add = function () {
+  $scope.todos.push($scope.newTodo);
+};
+```
+
+## 重點
+- 只操作資料
+- 畫面自動更新
